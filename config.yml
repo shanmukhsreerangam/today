@@ -18,9 +18,9 @@ jobs:
       - run:
           name: Build and push to Docker Hub
           command: |
-            docker build -t $DOCKER_HUB_USER_ID/$IMAGE_NAME:latest .
-            echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USER_ID" --password-stdin
-            docker push $DOCKER_HUB_USER_ID/$IMAGE_NAME:latest
+            docker build -t shanmukhsreerangam/shanmukh:latest .
+            echo "Shanmukh@0410" | docker login -u "shanmukhsreerangam" --password-stdin
+            docker push shanmukhsreerangam/shanmukh:latest
 
   test:
     working_directory: ~/circleci-python
